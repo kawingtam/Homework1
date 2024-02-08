@@ -22,13 +22,17 @@
             }, 1000, function(){
                 $("header h1").animate({
                     fontSize: "2em",
-                }, 1000);
+                }, 1000, function() {
+
+                    $("header h1").css("color", "white");
+                });
             });
             $("header h1").css("color", "black");
             $(".about-me img").css("border", "2px solid black");
         });
     });
 </script>
+
 </head>
 <body>
     <header>
