@@ -14,27 +14,21 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("button").click(function(){
-
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("header h1").animate({
+                fontSize: "5em",
+            }, 1000, function(){
                 $("header h1").animate({
-                    fontSize: "5em",
-                }, 1000, function(){
-
-                    $("header h1").animate({
-                        fontSize: "2em",
-                        color: "white"
-                    }, 1000);
-                });
-
-
-                $(".about-me img").css("border", "2px solid black");
-                // Change font color of the heading
-                $("header h1").css("color", "black");
+                    fontSize: "2em",
+                }, 1000);
             });
+
+            $(".about-me img").css("border", "2px solid black");
         });
-    </script>
+    });
+</script>
 </head>
 <body>
     <header>
