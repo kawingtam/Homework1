@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>CIS 128</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                // Grow font size and change color of the top heading
+                $("header h1").animate({
+                    fontSize: "3em",
+                    color: "blue"
+                }, 1000, function(){
+                    // Animation complete, revert back to original font size and color
+                    $("header h1").animate({
+                        fontSize: "2em",
+                        color: "black"
+                    }, 1000);
+                });
+
+                // Add border around the picture
+                $(".about-me img").css("border", "2px solid black");
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -34,5 +55,6 @@
             <li><a href="https://google.com/" target="_blank">Google</a> - Search engine.</li>
         </ul>
     </section>
+    <button>Start Animation</button>
 </body>
 </html>
