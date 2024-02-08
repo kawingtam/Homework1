@@ -20,9 +20,8 @@
                 // Grow font size and change color of the top heading
                 $("header h1").animate({
                     fontSize: "3em",
-                    color: "blue"
                 }, 1000, function(){
-                    // Animation complete, revert back to original font size and color
+                    // Animation complete, revert back to original font size
                     $("header h1").animate({
                         fontSize: "2em",
                         color: "black"
@@ -31,6 +30,8 @@
 
                 // Add border around the picture
                 $(".about-me img").css("border", "2px solid black");
+                // Change font color of the heading
+                $("header h1").css("color", "blue");
             });
         });
     </script>
