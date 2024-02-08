@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
     <title>CIS 128</title>
-    <!-- Include jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <h1 id="main-heading">CIS 128 - Mobile Web App</h1>
+        <h1>CIS 128 - Mobile Web App</h1>
     </header>
     <section class="about-me">
-        <img id="my-picture" src="your_picture.jpeg" alt="Your Picture">
-        <h2>About Me</h2>
-        <p>My name is Kawing Tam. This is my first webpage.</p>
+        <img src="your_picture.jpeg" alt="Your Picture">
+        <p>About Me: My name is Kawing Tam. This is my first webpage.</p>
     </section>
     <section class="reasons">
-        <h2>Reasons for Attending This Class</h2>
-        <p>I take this class to explore my interest in different areas of computer science.</p>
+        <p>Reasons for Attending This Class: I take this class to explore my interest in different areas of computer science.</p>
     </section>
     <section class="technologies">
         <h2>Technologies for this Class</h2>
@@ -32,46 +28,9 @@
     <section class="resources">
         <h2>Resources</h2>
         <ul>
-            <li><a href="https://www.google.com/maps" target="_blank">Google Maps</a> - For direction</li>
+            <li><a href="https://www.google.com/maps" target="_blank">Google Maps</a> - For directions.</li>
             <li><a href="https://google.com/" target="_blank">Google</a> - Search engine.</li>
         </ul>
     </section>
-    
-    <!-- Button to trigger the animation -->
-    <button id="start-animation">Start Animation</button>
-
-    <script>
-        // jQuery code to handle animation tasks
-        $(document).ready(function() {
-            $("#start-animation").click(function() {
-                // Animation to grow and shrink font size of the heading
-                $("#main-heading").animate({
-                    fontSize: '+=10px'
-                }, 'slow', function() {
-                    $(this).animate({
-                        fontSize: '-=10px'
-                    }, 'slow');
-                });
-
-                // Animation to change font color
-                setTimeout(function() {
-                    $("#main-heading").css("color", "blue");
-                    setTimeout(function() {
-                        $("#main-heading").css("color", "black");
-                    }, 1000);
-                }, 1000);
-
-                // Animation to add and remove border around the picture
-                $("#my-picture").animate({
-                    borderWidth: '5px',
-                    borderColor: 'blue'
-                }, 'slow', function() {
-                    $(this).animate({
-                        borderWidth: '0px'
-                    }, 'slow');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
