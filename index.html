@@ -17,18 +17,20 @@
     <script>
         $(document).ready(function(){
             $("button").click(function(){
-                // Grow font size and change color of the top heading
+
                 $("header h1").animate({
-                    fontSize: "3em",
+                    fontSize: "5em",
                 }, 1000, function(){
-                    // Animation complete, revert back to original font size
+
                     $("header h1").animate({
                         fontSize: "2em",
                         color: "white"
                     }, 1000);
                 });
 
-
+                // Change font color of the heading
+                $("header h1").css("color", "black");
+                
                 $(".about-me img").css("border", "2px solid black");
                 // Change font color of the heading
                 $("header h1").css("color", "black");
