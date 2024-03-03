@@ -3,46 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* CSS styles from external file */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #3498db;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-        }
-
-        .about-me img {
-            float: left;
-            margin-right: 20px;
-            border-radius: 50%;
-        }
-
-        .resources a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        .resources a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
     <title>CIS 128</title>
     <!-- Include jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* Adjusted button placement */
+        #start-animation {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -81,11 +53,12 @@
         $(document).ready(function() {
             $("#start-animation").click(function() {
                 // Animation to grow and shrink font size of the heading
+                var originalFontSize = parseFloat($("#main-heading").css("font-size"));
                 $("#main-heading").animate({
-                    fontSize: '+=10px'
+                    fontSize: '+=' + (originalFontSize * 0.5) + 'px'
                 }, 'slow', function() {
                     $(this).animate({
-                        fontSize: '-=10px'
+                        fontSize: '-=' + (originalFontSize * 0.5) + 'px'
                     }, 'slow');
                 });
 
